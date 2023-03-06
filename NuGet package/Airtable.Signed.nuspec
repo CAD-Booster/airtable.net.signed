@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Airtable.Signed</id>
+    <version>1.2.0</version>
+    <authors>Ngoc Nicholas, CAD Booster B.V.</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <icon>airtable_64x64.png</icon>
+    <projectUrl>https://github.com/CAD-Booster/airtable.net.signed</projectUrl>
+    <description>The Airtable.NET NuGet package repackaged with signed assemblies. See https://github.com/ngocnicholas/airtable.net and https://www.nuget.org/packages/Airtable for the official project.</description>
+    <releaseNotes>Added support for returnFieldsByFieldId, cellFormat, timeZone, and userLocale used in List Records operations.
+Fixed bug in not setting the detail error message for Invalid Request Exeption.
+Added overloaded methods for taking a record list as an argument in Create/Update/Replace records operations.
+Updated System.Text.Json from 6.0.2 to 6.0.5.
+Removed no longer needed dependency on Newtonsoft.json in AirtableApiClient.Tests  project.
+Added more test methods in AirtableApiClient.Tests.
+Made private AirtableBase constructor public so that users can pass in a custom HTTP delegating handler.</releaseNotes>
+    <copyright>Copyright belongs to ngocnicholas</copyright>
+    <tags>Airtable database spreadsheet organize Kanban API</tags>
+	<dependencies>
+		<group targetFramework=".NETStandard" >
+			<dependency id="System.Text.Json" version="7.0.1" />
+		</group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="airtable_64x64.png" target="" />
+	<file src=".\lib\netstandard\*.dll" target="lib/netstandard" />
+  </files>
+</package>
