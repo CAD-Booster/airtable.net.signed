@@ -19,13 +19,13 @@ Made private AirtableBase constructor public so that users can pass in a custom 
     <copyright>Copyright belongs to ngocnicholas</copyright>
     <tags>Airtable database spreadsheet organize Kanban API</tags>
 	<dependencies>
-		<group targetFramework=".NETStandard" >
-			<dependency id="System.Text.Json" version="7.0.1" />
+		<group targetFramework=".NETStandard2.0" >
+			<dependency id="System.Text.Json" version="7.0.2" exclude="Build,Analyzers" />
 		</group>
     </dependencies>
   </metadata>
   <files>
     <file src="airtable_64x64.png" target="" />
-	<file src=".\lib\netstandard\*.dll" target="lib/netstandard" />
+	<file src=".\lib\netstandard2.0\*.dll" target="lib/netstandard2.0" />
   </files>
 </package>
