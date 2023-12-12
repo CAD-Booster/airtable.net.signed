@@ -2,30 +2,31 @@
 <package >
   <metadata>
     <id>Airtable.Signed</id>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <authors>Ngoc Nicholas, CAD Booster B.V.</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <icon>airtable_64x64.png</icon>
     <projectUrl>https://github.com/CAD-Booster/airtable.net.signed</projectUrl>
     <description>The Airtable.NET NuGet package repackaged with signed assemblies. See https://github.com/ngocnicholas/airtable.net and https://www.nuget.org/packages/Airtable for the official project.</description>
-    <releaseNotes>Added support for returnFieldsByFieldId, cellFormat, timeZone, and userLocale used in List Records operations.
-Fixed bug in not setting the detail error message for Invalid Request Exeption.
-Added overloaded methods for taking a record list as an argument in Create/Update/Replace records operations.
-Updated System.Text.Json from 6.0.2 to 6.0.5.
-Removed no longer needed dependency on Newtonsoft.json in AirtableApiClient.Tests  project.
+    <releaseNotes>Added support for new Authentication methods, Comments API, Get User ID and Scopes, cellFormat, timeZone, and userLocale used in List Records operations.
+Updates to existing endpoints such as ListRecords and Update/Replace Multiple Records.
+Merged enhancements for parsing out fields contributed by Bracel Bradea.
+Updated System.Text.Json from 6.0.5 to 7.0.2.
 Added more test methods in AirtableApiClient.Tests.
-Made private AirtableBase constructor public so that users can pass in a custom HTTP delegating handler.</releaseNotes>
+Welcome to .NET 7.0!
+---------------------
+SDK Version: 7.0.200</releaseNotes>
     <copyright>Copyright belongs to ngocnicholas</copyright>
     <tags>Airtable database spreadsheet organize Kanban API</tags>
 	<dependencies>
-		<group targetFramework=".NETStandard" >
-			<dependency id="System.Text.Json" version="7.0.1" />
+		<group targetFramework=".NETStandard2.0" >
+			<dependency id="System.Text.Json" version="7.0.2" exclude="Build,Analyzers" />
 		</group>
     </dependencies>
   </metadata>
   <files>
     <file src="airtable_64x64.png" target="" />
-	<file src=".\lib\netstandard\*.dll" target="lib/netstandard" />
+	<file src=".\lib\netstandard2.0\*.dll" target="lib/netstandard2.0" />
   </files>
 </package>
