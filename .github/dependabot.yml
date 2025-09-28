@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "nuget"
-    directory: "/.github/dummy.csproj"
+    directory: "/.github"
     schedule:
       interval: "weekly"
     allow:
