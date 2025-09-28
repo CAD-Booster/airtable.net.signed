@@ -5,7 +5,7 @@
     <version>1.4.0</version>
     <authors>Ngoc Nicholas, CAD Booster B.V.</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <license type="expression">MIT</license>
+    <license type="file">LICENSE</license>
     <icon>airtable_64x64.png</icon>
     <projectUrl>https://github.com/CAD-Booster/airtable.net.signed</projectUrl>
 	<readme>README.md</readme>
