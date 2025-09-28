@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Airtable.Signed</id>
-    <version>1.4.0</version>
+    <version>1.7.1</version>
     <authors>Ngoc Nicholas, CAD Booster B.V.</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE</license>
@@ -10,24 +10,23 @@
     <projectUrl>https://github.com/CAD-Booster/airtable.net.signed</projectUrl>
 	<readme>README.md</readme>
     <description>The Airtable.NET NuGet package repackaged with signed assemblies. See https://github.com/ngocnicholas/airtable.net and https://www.nuget.org/packages/Airtable for the official project.</description>
-    <releaseNotes>PR#76: Added support for Webhooks
-Fixed PR#79: Include CreatedRecords and UpdatedRecords when performing an upsert
-    Added 2 more properties in AirtableCreateUpdateReplaceMultipleRecordsResponse: 
-        string[] UpdatedRecords and string[] CreatedRecords.
-Fixed PR#71 and PR#77: support for returnFieldsByFieldId is added in RetrieveRecord(). 
-Merged enhancements in the README.MD file  by NiJeTi.
-Added more test methods in AirtableApiClient.Tests.</releaseNotes>
+    <releaseNotes>Multi-target net8.0 and netstandard2.0
+        No longer pins exact version numbers for reference packages in netstandard2.0 target.</releaseNotes>
     <copyright>Copyright belongs to ngocnicholas</copyright>
     <tags>Airtable database spreadsheet organize Kanban API</tags>
 	<dependencies>
-		<group targetFramework=".NETStandard2.0" >
-			<dependency id="System.Text.Json" version="7.0.2" exclude="Build,Analyzers" />
-		</group>
+      <group targetFramework="net8.0" />
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Runtime.CompilerServices.Unsafe" version="[6.0.0, 10.0.0)" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encodings.Web" version="[6.0.0, 10.0.0)" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Json" version="[6.0.10, 10.0.0)" exclude="Build,Analyzers" />
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="airtable_64x64.png" target="" />
     <file src="README.md" target="" />
 	<file src=".\lib\netstandard2.0\*.dll" target="lib/netstandard2.0" />
+	<file src=".\lib\net8.0\*.dll" target="lib/net8.0" />
   </files>
 </package>
