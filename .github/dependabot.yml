@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/.github/dummy.csproj"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-name: "Airtable"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"   # PRs will start with "deps: Bump Airtable..."
