@@ -1,7 +1,7 @@
  # About this signed version
 This is the Airtable.NET NuGet package, repackaged with signed assemblies. See https://github.com/ngocnicholas/airtable.net and https://www.nuget.org/packages/Airtable for the official project.
 
- # Airtable .NET API Client
+  # Airtable .NET API Client
 
 Airtable.net is the C-Sharp client of the public APIs of Airtable. It builds a Windows class library that targets .NET Standard named AirtableClientApi.dll.
 AirtableClientApi.dll facilitates the usage of Airtable APIs without having to worry about interfacing with raw HTTP,
@@ -10,7 +10,7 @@ Airtable by consuming what Airtable public APIs have to offer programmatically s
 Update Record, Replace Record, Delete Record.
 
 # Installation
-Install the latest nuget package Airtable.1.7.1.nupkg
+Install the latest nuget package Airtable.1.8.0.nupkg
 
 ## Requirements
 
