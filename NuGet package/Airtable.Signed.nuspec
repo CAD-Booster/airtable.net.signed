@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Airtable.Signed</id>
-    <version>1.7.1</version>
+    <version>1.8.0</version>
     <authors>Ngoc Nicholas, CAD Booster B.V.</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
@@ -10,8 +10,14 @@
     <projectUrl>https://github.com/CAD-Booster/airtable.net.signed</projectUrl>
 	<readme>README.md</readme>
     <description>The Airtable.NET NuGet package repackaged with signed assemblies. See https://github.com/ngocnicholas/airtable.net and https://www.nuget.org/packages/Airtable for the official project.</description>
-    <releaseNotes>Multi-target net8.0 and netstandard2.0
-        No longer pins exact version numbers for reference packages in netstandard2.0 target.</releaseNotes>
+    <releaseNotes>Added 3 more endpoint APIs:
+       - ListBases for List bases
+       - GetBaseSchema for Get base schema
+       - CreateBase for Create base
+
+       Fixed a bug in an AirtableBase constructor causing the user provided HttpClient not actually used.
+       Modified ctors so that base ID is always optional for the need of constructing AirtableBase for using
+           the CreateBase endpoint and the ListBases endpoint.</releaseNotes>
     <copyright>Copyright belongs to ngocnicholas</copyright>
     <tags>Airtable database spreadsheet organize Kanban API</tags>
 	<dependencies>
